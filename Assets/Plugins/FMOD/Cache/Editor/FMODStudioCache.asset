@@ -132,12 +132,13 @@ MonoBehaviour:
   - {fileID: 8272254756065622593}
   - {fileID: -7569881097575668066}
   - {fileID: -3461556365200422798}
+  - {fileID: 3908744893742216977}
   EditorParameters: []
   MasterBanks:
   - {fileID: 8393945660958143044}
   StringsBanks:
   - {fileID: 5139156892868176595}
-  cacheTime: 638550380203907786
+  cacheTime: 638550533023506038
   cacheVersion: 131618
 --- !u!114 &2109856409909084418
 MonoBehaviour:
@@ -166,6 +167,33 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &3908744893742216977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Hall_off
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Hall_off
+  Guid:
+    Data1: 1596757930
+    Data2: 1224853060
+    Data3: 1918152103
+    Data4: 2070565556
+  Banks:
+  - {fileID: 8393945660958143044}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &5139156892868176595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,10 +209,10 @@ MonoBehaviour:
   Path: "C:/Users/\u0421\u0435\u0440\u0433\u0435\u0439/Desktop/Class_03/Build/Desktop/Master.strings.bank"
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638550380203907786
+  lastModified: 638550533023506038
   FileSizes:
   - Name: Desktop
-    Value: 1286
+    Value: 1332
   Exists: 1
 --- !u!114 &6539108368979800983
 MonoBehaviour:
@@ -255,10 +283,10 @@ MonoBehaviour:
   Path: "C:/Users/\u0421\u0435\u0440\u0433\u0435\u0439/Desktop/Class_03/Build/Desktop/Master.bank"
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638550380203887797
+  lastModified: 638550533023485953
   FileSizes:
   - Name: Desktop
-    Value: 2319392
+    Value: 2320032
   Exists: 1
 --- !u!114 &8645290680659095597
 MonoBehaviour:
