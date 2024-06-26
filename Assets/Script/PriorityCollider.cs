@@ -1,18 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
-public class PriorityCollider : MonoBehaviour
+public class SnapshotRestriction : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Collider targetCollider; // Коллайдер, в котором необходимо ограничить переключение снимка FMOD
+    private bool inRestrictedCollider = false;
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other == targetCollider)
+        {
+            inRestrictedCollider = true;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit(Collider other)
     {
-        
+        if (other == targetCollider)
+        {
+            inRestrictedCollider = false;
+        }
+    }
+
+    private void Update()
+    {
+        if (inRestrictedCollider)
+        {
+            // Здесь можно добавить логику, которая не позволит переключить снимок FMOD
+            // Например, можно отключить возможность игрока переключить снимок
+            // Это зависит от того, как вы управляете снимками FMOD в вашем проекте
+        }
     }
 }
