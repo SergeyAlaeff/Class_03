@@ -1,27 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9035331989645626258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: ../../FMOD Studio/Class_03/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638549710823372971
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 984
-  Exists: 1
---- !u!114 &-4974051006688423121
+--- !u!114 &-8330552744119311028
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -31,43 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Hall_dron
+  m_Name: event:/Character/Footsteps/Walk
   m_EditorClassIdentifier: 
-  Path: event:/Hall_dron
-  guid: 28fc5420a1bdc1488d01862aef128538
+  Path: event:/Character/Footsteps/Walk
+  Guid:
+    Data1: -728519916
+    Data2: 1215541416
+    Data3: 1370343833
+    Data4: -288804286
   Banks:
-  - {fileID: 1144818951311709904}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 43400
---- !u!114 &-3101084475632946558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character/Footsteps/Run
-  m_EditorClassIdentifier: 
-  Path: event:/Character/Footsteps/Run
-  guid: e5f62cae3bc7e642a87def2fa86332a4
-  Banks:
-  - {fileID: 1144818951311709904}
+  - {fileID: 8393945660958143044}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1520
---- !u!114 &-2346121196464003928
+  Length: 260
+--- !u!114 &-7569881097575668066
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -77,12 +37,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/Hall
+  m_Name: snapshot:/Ladder
   m_EditorClassIdentifier: 
-  Path: snapshot:/Hall
-  guid: 32100926f588e2469d4fd8d0803d324a
+  Path: snapshot:/Ladder
+  Guid:
+    Data1: -193071584
+    Data2: 1161465253
+    Data3: 692533147
+    Data4: 72520301
   Banks:
-  - {fileID: 1144818951311709904}
+  - {fileID: 8393945660958143044}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-6432141776461999002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Hall_rever
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Hall_rever
+  Guid:
+    Data1: -840746861
+    Data2: 1328198703
+    Data3: 1278440623
+    Data4: 1919364011
+  Banks:
+  - {fileID: 8393945660958143044}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -103,21 +94,24 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -9035331989645626258}
-  - {fileID: 1144818951311709904}
+  - {fileID: 5139156892868176595}
+  - {fileID: 8393945660958143044}
   EditorEvents:
-  - {fileID: -4974051006688423121}
-  - {fileID: 7157131399623695716}
-  - {fileID: -3101084475632946558}
-  - {fileID: 293550670014869641}
+  - {fileID: -8330552744119311028}
+  - {fileID: 8645290680659095597}
+  - {fileID: 2109856409909084418}
+  - {fileID: 6539108368979800983}
+  - {fileID: -6432141776461999002}
+  - {fileID: 8272254756065622593}
+  - {fileID: -7569881097575668066}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 1144818951311709904}
+  - {fileID: 8393945660958143044}
   StringsBanks:
-  - {fileID: -9035331989645626258}
-  stringsBankWriteTime: 638549710823372971
-  cacheVersion: 6
---- !u!114 &293550670014869641
+  - {fileID: 5139156892868176595}
+  cacheTime: 638550358461362978
+  cacheVersion: 131618
+--- !u!114 &2109856409909084418
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,12 +121,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/Hall_Rever
+  m_Name: snapshot:/Hallway
   m_EditorClassIdentifier: 
-  Path: snapshot:/Hall_Rever
-  guid: 2d583e0943566845bccc04252f1373f2
+  Path: snapshot:/Hallway
+  Guid:
+    Data1: 155080749
+    Data2: 1164465731
+    Data3: 621071548
+    Data4: -227339473
   Banks:
-  - {fileID: 1144818951311709904}
+  - {fileID: 8393945660958143044}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -140,7 +138,81 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &1144818951311709904
+--- !u!114 &5139156892868176595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: "C:/Users/\u0421\u0435\u0440\u0433\u0435\u0439/Desktop/Class_03/Build/Desktop/Master.strings.bank"
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638550358461362978
+  FileSizes:
+  - Name: Desktop
+    Value: 1184
+  Exists: 1
+--- !u!114 &6539108368979800983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Candles
+  m_EditorClassIdentifier: 
+  Path: event:/Candles
+  Guid:
+    Data1: -2083007924
+    Data2: 1333814640
+    Data3: 1784389763
+    Data4: 308459117
+  Banks:
+  - {fileID: 8393945660958143044}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 22243
+--- !u!114 &8272254756065622593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character/Footsteps/Run
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Footsteps/Run
+  Guid:
+    Data1: -1372784923
+    Data2: 1122420539
+    Data3: 804224424
+    Data4: -1540201560
+  Banks:
+  - {fileID: 8393945660958143044}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 294
+--- !u!114 &8393945660958143044
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,14 +224,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: ../../FMOD Studio/Class_03/Build/Desktop/Master.bank
+  Path: "C:/Users/\u0421\u0435\u0440\u0433\u0435\u0439/Desktop/Class_03/Build/Desktop/Master.bank"
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638549710823267151
-  LoadResult: 0
-  FileSizes: []
+  lastModified: 638550358461352907
+  FileSizes:
+  - Name: Desktop
+    Value: 2317536
   Exists: 1
---- !u!114 &7157131399623695716
+--- !u!114 &8645290680659095597
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,16 +242,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character/Footsteps/Walk
+  m_Name: event:/Hall_dron
   m_EditorClassIdentifier: 
-  Path: event:/Character/Footsteps/Walk
-  guid: 14ab93d4a8b0734899c9ad514232c9ee
+  Path: event:/Hall_dron
+  Guid:
+    Data1: 542440488
+    Data2: 1220656545
+    Data3: 713425293
+    Data4: 948245231
   Banks:
-  - {fileID: 1144818951311709904}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
+  - {fileID: 8393945660958143044}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1520
+  Length: 47000

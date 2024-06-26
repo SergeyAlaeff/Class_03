@@ -8,13 +8,13 @@ using FMODUnity;
 
 public class FmodFootstep : MonoBehaviour
 {
-    [EventRef] public string runEvent;
-    [EventRef] public string walkEvent;
-    [EventRef] public string jumpEvent;
-    [EventRef] public string rollEvent;
-    [EventRef] public string landEvent;
-    [EventRef] public string idleEvent;
-    [EventRef] public string crouchEvent;
+    public EventReference runEvent;
+    public EventReference walkEvent;
+    public EventReference jumpEvent;
+    public EventReference rollEvent;
+    public EventReference landEvent;
+    public EventReference idleEvent;
+    public EventReference crouchEvent;
     
     private vThirdPersonController tpController;
     private vThirdPersonInput tpInput;
@@ -50,16 +50,18 @@ public class FmodFootstep : MonoBehaviour
                     runInstance = RuntimeManager.CreateInstance(runEvent);
                     RuntimeManager.AttachInstanceToGameObject(runInstance, gameObject.transform, gameObject.GetComponent<Rigidbody>());
                     runInstance.start();
-                    runInstance.release();
+                    
                 }
                 else
                 {
                     walkInstance = RuntimeManager.CreateInstance(walkEvent);
                     RuntimeManager.AttachInstanceToGameObject(walkInstance, gameObject.transform, gameObject.GetComponent<Rigidbody>());
                     walkInstance.start();
-                    walkInstance.release();
+                   
                 }
-            }  
+            walkInstance.release();
+            runInstance.release();
+        }  
         
     }
 
