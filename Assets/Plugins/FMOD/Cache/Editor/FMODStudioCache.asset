@@ -81,6 +81,33 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-3461556365200422798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Hallwey open
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Hallwey open
+  Guid:
+    Data1: 1710524575
+    Data2: 1303666554
+    Data3: 556742542
+    Data4: -1967274553
+  Banks:
+  - {fileID: 8393945660958143044}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,12 +131,13 @@ MonoBehaviour:
   - {fileID: -6432141776461999002}
   - {fileID: 8272254756065622593}
   - {fileID: -7569881097575668066}
+  - {fileID: -3461556365200422798}
   EditorParameters: []
   MasterBanks:
   - {fileID: 8393945660958143044}
   StringsBanks:
   - {fileID: 5139156892868176595}
-  cacheTime: 638550358461362978
+  cacheTime: 638550380203907786
   cacheVersion: 131618
 --- !u!114 &2109856409909084418
 MonoBehaviour:
@@ -153,10 +181,10 @@ MonoBehaviour:
   Path: "C:/Users/\u0421\u0435\u0440\u0433\u0435\u0439/Desktop/Class_03/Build/Desktop/Master.strings.bank"
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638550358461362978
+  lastModified: 638550380203907786
   FileSizes:
   - Name: Desktop
-    Value: 1184
+    Value: 1286
   Exists: 1
 --- !u!114 &6539108368979800983
 MonoBehaviour:
@@ -227,10 +255,10 @@ MonoBehaviour:
   Path: "C:/Users/\u0421\u0435\u0440\u0433\u0435\u0439/Desktop/Class_03/Build/Desktop/Master.bank"
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638550358461352907
+  lastModified: 638550380203887797
   FileSizes:
   - Name: Desktop
-    Value: 2317536
+    Value: 2319392
   Exists: 1
 --- !u!114 &8645290680659095597
 MonoBehaviour:
@@ -258,4 +286,4 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 47000
+  Length: 44500
