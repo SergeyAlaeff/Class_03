@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: vItemEnumsList
   m_EditorClassIdentifier: 
   itemTypeEnumValues:
-  - Consumable
+  - 
   - Builder
   itemAttributesEnumValues:
   - Health

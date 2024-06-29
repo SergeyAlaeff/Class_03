@@ -30,6 +30,8 @@ TagManager:
   - CoverPoint
   - Interactable
   - AIAction
+  - Carpet
+  - ladder concerte
   layers:
   - Default
   - TransparentFX
