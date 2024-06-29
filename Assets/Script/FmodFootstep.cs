@@ -20,7 +20,7 @@ public class FmodFootstep : MonoBehaviour
     private vThirdPersonInput tpInput;
 
 
-    LayerMask lm;
+    public LayerMask lm;
     float Material;
     EventInstance runInstance;
     EventInstance walkInstance;
@@ -49,38 +49,40 @@ public class FmodFootstep : MonoBehaviour
     {
 
     }
-    private void PlayFootstep(ref EventInstance instance)
-    {
-        PLAYBACK_STATE state;
-        instance.getPlaybackState(out state);
-        if (state != PLAYBACK_STATE.PLAYING)
-        {
-            RuntimeManager.AttachInstanceToGameObject(instance, transform, GetComponent<Rigidbody>());
-            instance.start();
-        }
-    }
+   
 
 
     void footstepPlayer()
     {
+        
 
-        if (tpInput.cc.inputMagnitude > 0.1f && tpController.isJumping == false)
+        if (tpInput.cc.inputMagnitude > 0.1f)
         {
-            if (tpController.isSprinting)
+            MaterialCheck();
+            if (tpController.isJumping == false)
             {
-                PlayFootstep(ref runInstance);
+                if (tpController.isSprinting)
+                {
+                    runInstance = RuntimeManager.CreateInstance(runEvent);
+                    RuntimeManager.AttachInstanceToGameObject(runInstance, gameObject.transform, gameObject.GetComponent<Rigidbody>());
+                    runInstance.start();
+                }
+                else
+                {
+                    walkInstance = RuntimeManager.CreateInstance(walkEvent);
+                    RuntimeManager.AttachInstanceToGameObject(walkInstance, gameObject.transform, gameObject.GetComponent<Rigidbody>());
+                    walkInstance.start();
+                }
             }
-            else
-            {
-                PlayFootstep(ref walkInstance);
-            }
-
+            runInstance.release();
+            walkInstance.release();
         }
 
     }
 
     void footstepPlayerJump()
     {
+        MaterialCheck();
         jumpInstance = RuntimeManager.CreateInstance(jumpEvent);
         RuntimeManager.AttachInstanceToGameObject(jumpInstance, gameObject.transform, gameObject.GetComponent<Rigidbody>());
         jumpInstance.start();
@@ -88,6 +90,7 @@ public class FmodFootstep : MonoBehaviour
     }
     void footstepPlayerRoll()
     {
+        MaterialCheck();
         rollInstance = RuntimeManager.CreateInstance(rollEvent);
         RuntimeManager.AttachInstanceToGameObject(rollInstance, gameObject.transform, gameObject.GetComponent<Rigidbody>());
         rollInstance.start();
@@ -95,6 +98,7 @@ public class FmodFootstep : MonoBehaviour
     }
     void footstepPlayerLand()
     {
+        MaterialCheck();
         landInstance = RuntimeManager.CreateInstance(landEvent);
         RuntimeManager.AttachInstanceToGameObject(landInstance, gameObject.transform, gameObject.GetComponent<Rigidbody>());
         landInstance.start();
@@ -102,6 +106,7 @@ public class FmodFootstep : MonoBehaviour
     }
     void footstepPlayerIdle()
     {
+        MaterialCheck();
         idleInstance = RuntimeManager.CreateInstance(idleEvent);
         RuntimeManager.AttachInstanceToGameObject(idleInstance, gameObject.transform, gameObject.GetComponent<Rigidbody>());
         idleInstance.start();
@@ -114,18 +119,37 @@ public class FmodFootstep : MonoBehaviour
         crouchInstance.start();
         crouchInstance.release();
     }
-
-    void MatterialCheck()
+    void MaterialCheck()
     {
-        RaycastHit rh;
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out rh, 0.3f, lm))
-        {
-            if (rh.transform.tag == "Contert") Material = 0;
-            {
 
+        if (Physics.Raycast(gameObject.transform.position, Vector3.down, out RaycastHit hit, 1f, lm))
+        {
+            Debug.Log(hit.collider.tag);
+
+            switch (hit.collider.tag)
+            {
+                case "Concrete":
+                    Material = 0f;
+                    break;
+                case "Wood":
+                    Material = 1f;
+                    break;
+                case "Carpet":
+                    Material = 2f;
+                    break;
+                case "ladder concerte":
+                    Material = 3f;
+                    break;
+               
+                default:
+                    Material = 0f;
+                    break;
             }
+
         }
+
     }
+
     void OnDestroy()
     {
         // Освобождаем ресурсы FMOD
@@ -138,3 +162,4 @@ public class FmodFootstep : MonoBehaviour
         crouchInstance.release();
     }
 }
+
