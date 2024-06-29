@@ -132,7 +132,7 @@ MonoBehaviour:
   Type: 2
   IsGlobal: 0
   Labels:
-  - Concerte
+  - Concrete
   - Wood
   - Carpet
   - ladder
@@ -162,13 +162,14 @@ MonoBehaviour:
   - {fileID: -7569881097575668066}
   - {fileID: -3461556365200422798}
   - {fileID: 3908744893742216977}
+  - {fileID: 4879003619723722029}
   EditorParameters:
   - {fileID: 8245091708634690464}
   MasterBanks:
   - {fileID: 8393945660958143044}
   StringsBanks:
   - {fileID: 5139156892868176595}
-  cacheTime: 638552789920776256
+  cacheTime: 638552838681902922
   cacheVersion: 131618
 --- !u!114 &2109856409909084418
 MonoBehaviour:
@@ -197,6 +198,30 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &2687297149079606695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Parameter 3
+  m_EditorClassIdentifier: 
+  Name: Parameter 3
+  StudioPath: 
+  Min: 0
+  Max: 30
+  Default: 0
+  ID:
+    data1: 3374942177
+    data2: 411539816
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &3908744893742216977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,6 +249,34 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &4879003619723722029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music
+  Guid:
+    Data1: -849685600
+    Data2: 1253040188
+    Data3: -1910001760
+    Data4: -665968990
+  Banks:
+  - {fileID: 8393945660958143044}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 2687297149079606695}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42450
 --- !u!114 &5139156892868176595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,10 +292,10 @@ MonoBehaviour:
   Path: "C:/Users/\u0421\u0435\u0440\u0433\u0435\u0439/Desktop/Class_03/Build/Desktop/Master.strings.bank"
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638552789920776256
+  lastModified: 638552838681902922
   FileSizes:
   - Name: Desktop
-    Value: 1442
+    Value: 1478
   Exists: 1
 --- !u!114 &6539108368979800983
 MonoBehaviour:
@@ -338,10 +391,10 @@ MonoBehaviour:
   Path: "C:/Users/\u0421\u0435\u0440\u0433\u0435\u0439/Desktop/Class_03/Build/Desktop/Master.bank"
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638552789920755174
+  lastModified: 638552838681872682
   FileSizes:
   - Name: Desktop
-    Value: 2372480
+    Value: 3175712
   Exists: 1
 --- !u!114 &8645290680659095597
 MonoBehaviour:
@@ -393,7 +446,7 @@ MonoBehaviour:
   Type: 2
   IsGlobal: 0
   Labels:
-  - Concerte
+  - Concrete
   - Wood
   - Carpet
   - ladder
