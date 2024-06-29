@@ -22,8 +22,6 @@ public class DoorController : MonoBehaviour
     {
         isOpen = true;
         doorAnimator.SetTrigger("Open"); // Предполагается, что у вас есть триггер "Open" в аниматоре
-        EventInstance soundInstance = RuntimeManager.CreateInstance(doorOpen); // Создание экземпляра события звука
-        soundInstance.start(); // Запуск воспроизведения звука
-        soundInstance.release(); // Освобождение экземпляра события после воспроизведения
+        FMODUnity.RuntimeManager.PlayOneShot(doorOpen,  gameObject.transform.position);
     }
 }
