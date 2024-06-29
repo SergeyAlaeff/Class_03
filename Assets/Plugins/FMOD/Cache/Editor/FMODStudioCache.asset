@@ -225,13 +225,14 @@ MonoBehaviour:
   - {fileID: -5179903766906452599}
   - {fileID: 6257604253476619745}
   - {fileID: 7159996280607531564}
+  - {fileID: 3055544560234626822}
   EditorParameters:
   - {fileID: 8245091708634690464}
   MasterBanks:
   - {fileID: 8393945660958143044}
   StringsBanks:
   - {fileID: 5139156892868176595}
-  cacheTime: 638553061112163636
+  cacheTime: 638553077128374618
   cacheVersion: 131618
 --- !u!114 &2109856409909084418
 MonoBehaviour:
@@ -311,6 +312,33 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &3055544560234626822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/AI/Voice
+  m_EditorClassIdentifier: 
+  Path: event:/AI/Voice
+  Guid:
+    Data1: 1519742039
+    Data2: 1226268606
+    Data3: -1288173671
+    Data4: -603399079
+  Banks:
+  - {fileID: 8393945660958143044}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2927
 --- !u!114 &3808166812647729525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,10 +437,10 @@ MonoBehaviour:
   Path: "C:/Users/\u0421\u0435\u0440\u0433\u0435\u0439/Desktop/Class_03/Build/Desktop/Master.strings.bank"
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638553061112163636
+  lastModified: 638553077128374618
   FileSizes:
   - Name: Desktop
-    Value: 1962
+    Value: 1998
   Exists: 1
 --- !u!114 &5625779423612263383
 MonoBehaviour:
@@ -495,7 +523,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1771
+  Length: 6896
 --- !u!114 &6539108368979800983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,10 +645,10 @@ MonoBehaviour:
   Path: "C:/Users/\u0421\u0435\u0440\u0433\u0435\u0439/Desktop/Class_03/Build/Desktop/Master.bank"
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638553061112130146
+  lastModified: 638553077128264922
   FileSizes:
   - Name: Desktop
-    Value: 3762336
+    Value: 4051904
   Exists: 1
 --- !u!114 &8645290680659095597
 MonoBehaviour:
