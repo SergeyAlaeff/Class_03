@@ -21,7 +21,7 @@ public class FmodFootstep : MonoBehaviour
 
 
     public LayerMask lm;
-    public float Material;
+    float Material;
     EventInstance runInstance;
     EventInstance walkInstance;
     EventInstance jumpInstance;
@@ -54,30 +54,28 @@ public class FmodFootstep : MonoBehaviour
 
     void footstepPlayer()
     {
-
         
+
         if (tpInput.cc.inputMagnitude > 0.1f)
         {
             MaterialCheck();
-
             if (tpController.isJumping == false)
             {
                 if (tpController.isSprinting)
                 {
                     runInstance = RuntimeManager.CreateInstance(runEvent);
                     RuntimeManager.AttachInstanceToGameObject(runInstance, gameObject.transform, gameObject.GetComponent<Rigidbody>());
-                    runInstance.setParameterByName("MaterialCheck", Material);
                     runInstance.start();
                 }
                 else
                 {
                     walkInstance = RuntimeManager.CreateInstance(walkEvent);
                     RuntimeManager.AttachInstanceToGameObject(walkInstance, gameObject.transform, gameObject.GetComponent<Rigidbody>());
-                    walkInstance.setParameterByName("MaterialCheck", Material);
                     walkInstance.start();
                 }
             }
-           
+            runInstance.release();
+            walkInstance.release();
         }
 
     }
@@ -123,14 +121,12 @@ public class FmodFootstep : MonoBehaviour
     }
     void MaterialCheck()
     {
-        RaycastHit rh;
-        // Выполнение Raycast вниз от позиции текущего объекта
-        if (Physics.Raycast(gameObject.transform.position, Vector3.down, out rh, 0.3f, lm))
-        {
-            Debug.Log(rh.collider.tag); // Вывод тега объекта, в который попал луч
 
-            // Определение материала основываясь на теге объекта
-            switch (rh.collider.tag)
+        if (Physics.Raycast(gameObject.transform.position, Vector3.down, out RaycastHit hit, 1f, lm))
+        {
+            Debug.Log(hit.collider.tag);
+
+            switch (hit.collider.tag)
             {
                 case "Concrete":
                     Material = 0f;
@@ -144,12 +140,14 @@ public class FmodFootstep : MonoBehaviour
                 case "ladder concerte":
                     Material = 3f;
                     break;
-
+               
                 default:
-                    Material = 0f; // Значение по умолчанию, если тег не совпадает
+                    Material = 0f;
                     break;
             }
+
         }
+
     }
 
     void OnDestroy()
