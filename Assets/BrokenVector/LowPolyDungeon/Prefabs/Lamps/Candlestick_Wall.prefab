@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 113386649}
   - component: {fileID: 113386650}
   - component: {fileID: 3474235370440126395}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: CandleLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.34, z: 0.248}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4725356937742777146}
   m_RootOrder: 0
@@ -117,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 620471810702236654}
   - component: {fileID: 9106672040043951531}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +133,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.32, z: 0.248}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4725356937742777146}
   m_RootOrder: 1
@@ -163,7 +161,9 @@ GameObject:
   - component: {fileID: 4725356937743547162}
   - component: {fileID: 4725356937744546266}
   - component: {fileID: 4725356937742542617}
-  m_Layer: 0
+  - component: {fileID: 2478990908024996266}
+  - component: {fileID: 7110360450592266122}
+  m_Layer: 11
   m_Name: Candlestick_Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 113386649}
   - {fileID: 620471810702236654}
@@ -206,7 +205,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -252,3 +250,47 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1066429553901080227, guid: c04865966f8d8ae409e19627bacc4ee4, type: 3}
+--- !u!114 &2478990908024996266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4725356937742542618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  EventReference:
+    Guid:
+      Data1: -1784740762
+      Data2: 1275831737
+      Data3: 951371181
+      Data4: -246413306
+    Path: event:/Ambience/Torch
+  Event: 
+  PlayEvent: 3
+  StopEvent: 4
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!135 &7110360450592266122
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4725356937742542618}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 14.57
+  m_Center: {x: -0.000000059604645, y: -0.11511698, z: 0.17675097}

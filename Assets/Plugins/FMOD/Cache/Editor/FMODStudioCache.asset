@@ -109,6 +109,33 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-5179903766906452599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Big_Fire
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Big_Fire
+  Guid:
+    Data1: -312932149
+    Data2: 1115859131
+    Data3: -1101069172
+    Data4: -1976734812
+  Banks:
+  - {fileID: 8393945660958143044}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8160
 --- !u!114 &-3461556365200422798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,13 +220,18 @@ MonoBehaviour:
   - {fileID: -8179749931415536312}
   - {fileID: 9054404641227279992}
   - {fileID: 3808166812647729525}
+  - {fileID: 2370847270516348615}
+  - {fileID: 6106665569885768854}
+  - {fileID: -5179903766906452599}
+  - {fileID: 6257604253476619745}
+  - {fileID: 7159996280607531564}
   EditorParameters:
   - {fileID: 8245091708634690464}
   MasterBanks:
   - {fileID: 8393945660958143044}
   StringsBanks:
   - {fileID: 5139156892868176595}
-  cacheTime: 638552989202959837
+  cacheTime: 638553061112163636
   cacheVersion: 131618
 --- !u!114 &2109856409909084418
 MonoBehaviour:
@@ -228,6 +260,33 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &2370847270516348615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Torch
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Torch
+  Guid:
+    Data1: -1784740762
+    Data2: 1275831737
+    Data3: 951371181
+    Data4: -246413306
+  Banks:
+  - {fileID: 8393945660958143044}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8523
 --- !u!114 &2687297149079606695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,10 +409,10 @@ MonoBehaviour:
   Path: "C:/Users/\u0421\u0435\u0440\u0433\u0435\u0439/Desktop/Class_03/Build/Desktop/Master.strings.bank"
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638552989202959837
+  lastModified: 638553061112163636
   FileSizes:
   - Name: Desktop
-    Value: 1666
+    Value: 1962
   Exists: 1
 --- !u!114 &5625779423612263383
 MonoBehaviour:
@@ -383,6 +442,60 @@ MonoBehaviour:
   - Carpet
   - ladder
   Exists: 1
+--- !u!114 &6106665569885768854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Oven
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Oven
+  Guid:
+    Data1: -166874430
+    Data2: 1180269353
+    Data3: 1764605620
+    Data4: -1812115915
+  Banks:
+  - {fileID: 8393945660958143044}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 9948
+--- !u!114 &6257604253476619745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/AI/Zombi/Attack
+  m_EditorClassIdentifier: 
+  Path: event:/AI/Zombi/Attack
+  Guid:
+    Data1: 2105402725
+    Data2: 1273880091
+    Data3: 1195653293
+    Data4: -1241703102
+  Banks:
+  - {fileID: 8393945660958143044}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1771
 --- !u!114 &6539108368979800983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,6 +523,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 22243
+--- !u!114 &7159996280607531564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/AI/Zombi/Idle
+  m_EditorClassIdentifier: 
+  Path: event:/AI/Zombi/Idle
+  Guid:
+    Data1: 336899507
+    Data2: 1323531829
+    Data3: -946129230
+    Data4: -1808009987
+  Banks:
+  - {fileID: 8393945660958143044}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3402
 --- !u!114 &8245091708634690464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -477,10 +617,10 @@ MonoBehaviour:
   Path: "C:/Users/\u0421\u0435\u0440\u0433\u0435\u0439/Desktop/Class_03/Build/Desktop/Master.bank"
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638552989202927919
+  lastModified: 638553061112130146
   FileSizes:
   - Name: Desktop
-    Value: 3347712
+    Value: 3762336
   Exists: 1
 --- !u!114 &8645290680659095597
 MonoBehaviour:

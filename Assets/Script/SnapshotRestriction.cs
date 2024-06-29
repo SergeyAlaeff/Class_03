@@ -1,31 +1,56 @@
+using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
 
 public class SnapshotRestriction : MonoBehaviour
 {
-    public Collider targetCollider; // Коллайдер, в котором необходимо ограничить переключение снимка FMOD
-    public EventReference snapshotToActivate; // Ссылка на снимок FMOD, который нужно активировать
-
-    private FMOD.Studio.EventInstance snapshotInstance;
-
-    private void Start()
+    // Структура для хранения информации о снимке и его приоритете
+    private struct SnapshotInfo
     {
-        snapshotInstance = RuntimeManager.CreateInstance(snapshotToActivate);
-    }
+        public FMOD.Studio.EventInstance instance;
+        public int priority; // Чем выше число, тем выше приоритет
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player") && other == targetCollider)
+        public SnapshotInfo(FMOD.Studio.EventInstance instance, int priority)
         {
-            snapshotInstance.start();
+            this.instance = instance;
+            this.priority = priority;
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private static List<SnapshotInfo> activeSnapshots = new List<SnapshotInfo>();
+
+    public static void ActivateSnapshot(EventReference snapshotToActivate, int priority)
     {
-        if (other.gameObject.CompareTag("Player") && other == targetCollider)
+        var instance = RuntimeManager.CreateInstance(snapshotToActivate);
+        var newSnapshot = new SnapshotInfo(instance, priority);
+        instance.start();
+
+        activeSnapshots.Add(newSnapshot);
+        activeSnapshots.Sort((a, b) => b.priority.CompareTo(a.priority)); // Сортируем по убыванию приоритета
+
+        // Останавливаем все снимки с более низким приоритетом
+        for (int i = 1; i < activeSnapshots.Count; i++)
         {
-            snapshotInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            activeSnapshots[i].instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        }
+    }
+
+    public static void DeactivateSnapshot(EventReference snapshotToDeactivate)
+    {
+        for (int i = 0; i < activeSnapshots.Count; i++)
+        {
+            if (activeSnapshots[i].instance.handle == RuntimeManager.CreateInstance(snapshotToDeactivate).handle)
+            {
+                activeSnapshots[i].instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                activeSnapshots.RemoveAt(i);
+                break;
+            }
+        }
+
+        if (activeSnapshots.Count > 0)
+        {
+            // Возобновляем снимок с наивысшим приоритетом
+            activeSnapshots[0].instance.start();
         }
     }
 }
