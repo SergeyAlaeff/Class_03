@@ -27,7 +27,7 @@ MonoBehaviour:
   - {fileID: -817674103776150199}
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 680
 --- !u!114 &-8179749931415536312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,13 +191,14 @@ MonoBehaviour:
   - {fileID: 3908744893742216977}
   - {fileID: 4879003619723722029}
   - {fileID: -8179749931415536312}
+  - {fileID: 9054404641227279992}
   EditorParameters:
   - {fileID: 8245091708634690464}
   MasterBanks:
   - {fileID: 8393945660958143044}
   StringsBanks:
   - {fileID: 5139156892868176595}
-  cacheTime: 638552915576291850
+  cacheTime: 638552962326065272
   cacheVersion: 131618
 --- !u!114 &2109856409909084418
 MonoBehaviour:
@@ -320,10 +321,10 @@ MonoBehaviour:
   Path: "C:/Users/\u0421\u0435\u0440\u0433\u0435\u0439/Desktop/Class_03/Build/Desktop/Master.strings.bank"
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638552915576291850
+  lastModified: 638552962326065272
   FileSizes:
   - Name: Desktop
-    Value: 1518
+    Value: 1618
   Exists: 1
 --- !u!114 &6539108368979800983
 MonoBehaviour:
@@ -403,7 +404,7 @@ MonoBehaviour:
   - {fileID: 8937231242316897545}
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 416
 --- !u!114 &8393945660958143044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,10 +420,10 @@ MonoBehaviour:
   Path: "C:/Users/\u0421\u0435\u0440\u0433\u0435\u0439/Desktop/Class_03/Build/Desktop/Master.bank"
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638552915576252819
+  lastModified: 638552962326045003
   FileSizes:
   - Name: Desktop
-    Value: 3196768
+    Value: 3295968
   Exists: 1
 --- !u!114 &8645290680659095597
 MonoBehaviour:
@@ -479,3 +480,30 @@ MonoBehaviour:
   - Carpet
   - ladder
   Exists: 1
+--- !u!114 &9054404641227279992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/AI/Footsteps_sceleton_walk
+  m_EditorClassIdentifier: 
+  Path: event:/AI/Footsteps_sceleton_walk
+  Guid:
+    Data1: -406472455
+    Data2: 1234409692
+    Data3: -2139316082
+    Data4: -1554459776
+  Banks:
+  - {fileID: 8393945660958143044}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 370

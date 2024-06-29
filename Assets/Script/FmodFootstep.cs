@@ -156,5 +156,7 @@ public class FmodFootstep : MonoBehaviour
         idleInstance.release();
         crouchInstance.release();
     }
+    void FootstepsAI()
+    {
+    }
 }
-
