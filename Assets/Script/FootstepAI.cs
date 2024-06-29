@@ -34,11 +34,16 @@ public class FootstepAI : MonoBehaviour // Объявляем класс FmodFoo
 
     }
 
-    void Footsteps()
+    void footstepPlayer()
     {
 
     }
-    void FootstepsAI()
+    void footstepPlayerJump() { }
+    
+    void footstepPlayerRoll() { } 
+    void footstepPlayerLand() { }
+
+        void FootstepsAI()
     {
 
         if (AAA.input.magnitude > 0.1) // Проверяем, превышает ли величина ввода по модулю 0.1

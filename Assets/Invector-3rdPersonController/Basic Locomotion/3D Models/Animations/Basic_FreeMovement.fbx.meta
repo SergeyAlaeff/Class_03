@@ -958,29 +958,43 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.2621337
-        functionName: FootstepsAI
+      - time: 0.25816023
+        functionName: footstepFemale
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.2640582
+      - time: 0.26109084
         functionName: footstepPlayer
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.7280632
-        functionName: footstepPlayer
+      - time: 0.26510105
+        functionName: FootstepsAI
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.7315441
+      - time: 0.71216625
+        functionName: footstepFemale
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.71967465
         functionName: FootstepsAI
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.7221285
+        functionName: footstepPlayer
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
