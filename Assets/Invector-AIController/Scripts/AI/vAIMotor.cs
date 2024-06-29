@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+
 namespace Invector.vCharacterController.AI
 {
     public enum vAIMovementSpeed
@@ -1108,13 +1109,7 @@ namespace Invector.vCharacterController.AI
         /// Set Movement speed to 0 (zero)
         /// </summary>
         public virtual void Stop()
-        {
-            //targetDirection = transform.forward;
-            if (input != Vector3.zero)
-            {
-                // _turnOnSpotDirection = transform.forward;
-                input = Vector3.zero;
-            }
+        {   //targetDirection = transform.forward;   if (input != Vector3.zero)   {     // _turnOnSpotDirection = transform.forward;     input = Vector3.zero;   }
 
             movementSpeed = vAIMovementSpeed.Idle;
         }

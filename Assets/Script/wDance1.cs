@@ -1,7 +1,8 @@
 using UnityEngine;
 using Invector.vCharacterController.AI;
 
-public class wDance : MonoBehaviour
+
+public class wDance1 : MonoBehaviour
 {
     public Animator aiAnimator; // Ссылка на Animator AI
     public string playerTag = "Player"; // Тэг игрока
@@ -10,10 +11,9 @@ public class wDance : MonoBehaviour
     {
         if (other.CompareTag(playerTag))
         {
+            // Если объект, вошедший в триггер, имеет тег "Player",
+            // установить параметр wDance в true
             aiAnimator.SetBool("wDance", true);
-
-            // Добавьте эту строку, чтобы заставить персонажа стоять на месте после смены анимации
-            aiAnimator.SetFloat("MovementSpeed", 0f); // Предполагая, что "MovementSpeed" - это параметр, управляющий движением
         }
     }
 
@@ -21,10 +21,9 @@ public class wDance : MonoBehaviour
     {
         if (other.CompareTag(playerTag))
         {
+            // Когда игрок покидает триггер, можно сбросить параметр обратно,
+            // если это предполагается логикой игры
             aiAnimator.SetBool("wDance", false);
-
-            // Добавьте эту строку, чтобы остановить персонажа от движения, когда игрок покидает триггер
-            aiAnimator.SetFloat("MovementSpeed", 0f); // Предполагая, что "MovementSpeed" - это параметр, управляющий движением
         }
     }
 }
