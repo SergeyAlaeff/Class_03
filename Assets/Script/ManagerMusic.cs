@@ -9,7 +9,7 @@ using Invector.vCharacterController;
 public class ManagerMusic : MonoBehaviour
 {
     public EventReference MusicEvent;
-    public float IntensityParameterValue = 20f;
+    public float IntensityParameterValue = 20f;      
     FMOD.Studio.EventInstance MusicInstance;
     public vControlAIMelee Enemy;
     public bool Combat = false;
@@ -24,25 +24,24 @@ public class ManagerMusic : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider col)
+    private void OnTriggerEnter(Collider AMB_Sceleton_Music)
     {
-        if (col.CompareTag("Player"))
+        if (AMB_Sceleton_Music.CompareTag("Player"))
         {
             MusicInstance.setParameterByName("Intensity", 20f);
             MusicInstance.start();
-            Debug.Log("MUZ VILLAGE");
+           
         }
-        else if (col.name.Equals("AMB_Zombi"))
+        else if (Enemy.isDead && AMB_Sceleton_Music.CompareTag("Player"))
         {
-            MusicInstance.setParameterByName("Intensity", 60f);
-            MusicInstance.start();
-            Debug.Log("MUZ VILLAGE");
+           MusicInstance.setParameterByName("Intensity", 60f);
+            IntensityParameterValue = 100f;
         }
     }
 
     void OnTriggerExit(Collider col)
     {
-        if (col.CompareTag("Player") || col.name.Equals("AMB_Zombi"))
+        if (col.CompareTag("Player"))
         {
             MusicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
@@ -51,7 +50,7 @@ public class ManagerMusic : MonoBehaviour
 
     void Update()
     {
-        if (Enemy != null) // Проверка на null, прежде чем обращаться к Enemy
+        if (Enemy != null)
         {
             if (Enemy.isInCombat && !Combat)
             {
@@ -65,30 +64,30 @@ public class ManagerMusic : MonoBehaviour
             }
             else if (Enemy.isDead)
             {
+                Debug.Log("Enemy is dead. Setting Intensity to 100f and restarting music.");
                 MusicInstance.setParameterByName("Intensity", 100f);
-                IntensityParameterValue = 100f; // Устанавливаем новое значение IntensityParameterValue
+                IntensityParameterValue = 100f;
                 Enemy.isDead = false;
+                
             }
         }
-
-        if (tpController != null) // Добавьте аналогичную проверку для tpController, если он может быть уничтожен
+        else if (tpController != null)
         {
             if (tpController.isDead)
             {
                 MusicInstance.setParameterByName("Intensity", 0f);
+                IntensityParameterValue = 0f;
                 tpController.isDead = false;
             }
         }
-
-        if (IntensityParameterValue == 100f)
+        else
         {
-            MusicInstance.setParameterByName("Intensity", 20f);
-            MusicInstance.start();
+            MusicInstance.setParameterByName("Intensity", 60f);
         }
     }
-
-    void OnDestroy()
+    private void OnDestroy()
     {
-        MusicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+       MusicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+       MusicInstance.release();
     }
 }

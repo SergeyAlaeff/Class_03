@@ -270,7 +270,7 @@ MonoBehaviour:
   - {fileID: -6020210511563634126}
   MinDistance: 1
   MaxDistance: 20
-  Length: 40645
+  Length: 43000
 --- !u!114 &-3247266891705253934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,6 +299,33 @@ MonoBehaviour:
   - Carpet
   - ladder
   Exists: 1
+--- !u!114 &-2686179832152780816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/AMB_SCELETON
+  m_EditorClassIdentifier: 
+  Path: snapshot:/AMB_SCELETON
+  Guid:
+    Data1: 71660179
+    Data2: 1093911446
+    Data3: 528587912
+    Data4: -1893359693
+  Banks:
+  - {fileID: 8393945660958143044}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-2480037349316375987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -593,13 +620,14 @@ MonoBehaviour:
   - {fileID: 5095911617108997609}
   - {fileID: -2146260053200858729}
   - {fileID: -4788160789604974627}
+  - {fileID: -2686179832152780816}
   EditorParameters:
   - {fileID: 3499017420105192259}
   MasterBanks:
   - {fileID: 8393945660958143044}
   StringsBanks:
   - {fileID: 5139156892868176595}
-  cacheTime: 638553906997778879
+  cacheTime: 638553941973724032
   cacheVersion: 131618
 --- !u!114 &259192735686015207
 MonoBehaviour:
@@ -937,10 +965,10 @@ MonoBehaviour:
   Path: "C:/Users/\u0421\u0435\u0440\u0433\u0435\u0439/Desktop/Class_03/Build/Desktop/Master.strings.bank"
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638553906997778879
+  lastModified: 638553941973724032
   FileSizes:
   - Name: Desktop
-    Value: 2598
+    Value: 2642
   Exists: 1
 --- !u!114 &5415525365293741974
 MonoBehaviour:
@@ -1121,10 +1149,10 @@ MonoBehaviour:
   Path: "C:/Users/\u0421\u0435\u0440\u0433\u0435\u0439/Desktop/Class_03/Build/Desktop/Master.bank"
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638553906997739893
+  lastModified: 638553941973664026
   FileSizes:
   - Name: Desktop
-    Value: 9314976
+    Value: 9665664
   Exists: 1
 --- !u!114 &8694171133864746227
 MonoBehaviour:

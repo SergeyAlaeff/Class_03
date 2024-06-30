@@ -1154,7 +1154,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.08308604
+      - time: 0.038575657
         functionName: footstepPlayerLandLow
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -1190,7 +1190,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.12931797
+      - time: 0.08777494
         functionName: footstepPlayerLand
         data: 
         objectReferenceParameter: {instanceID: 0}
