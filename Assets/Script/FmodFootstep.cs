@@ -99,7 +99,7 @@ public class FmodFootstep : MonoBehaviour
         landInstance.start();
         landInstance.release();
     }
-    void footstepPlayerIdle()
+    void footstepPlayerLandLow()
     {
         MaterialCheck();
         idleInstance = RuntimeManager.CreateInstance(idleEvent);
