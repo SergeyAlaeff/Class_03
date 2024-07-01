@@ -21,6 +21,9 @@ public class FmodFootstep : MonoBehaviour
     private vThirdPersonController tpController;
     private vThirdPersonInput tpInput;
 
+    public Animator animator;
+    private int health = 100;
+
 
     public LayerMask lm;
     public float Material;
@@ -31,12 +34,16 @@ public class FmodFootstep : MonoBehaviour
     EventInstance landInstance;
     EventInstance idleInstance;
     EventInstance crouchInstance;
+    EventInstance attackInstance;
+    EventInstance damageInstance;
+
+    public float currentHealth;
     // Start is called before the first frame update
     void Start()
     {
         tpController = GetComponent<vThirdPersonController>();
         tpInput = GetComponent<vThirdPersonInput>();
-
+        currentHealth = tpController.currentHealth;
     }
 
     // Update is called once per frame
@@ -119,12 +126,26 @@ public class FmodFootstep : MonoBehaviour
 
     void Attack()
     {
-        FMODUnity.RuntimeManager.PlayOneShot(attackEvent, gameObject.transform.position);
+        Debug.Log("Attack method called");
+        attackInstance = FMODUnity.RuntimeManager.CreateInstance(attackEvent);
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(attackInstance, gameObject.transform, gameObject.GetComponent<Rigidbody>());
+        
+        attackInstance.start();
+        attackInstance.release();
     }
-    void Damage()
+
+    public void OnDamageReceived(float damageAmount)
     {
-        FMODUnity.RuntimeManager.PlayOneShot(damageEvent, gameObject.transform.position);
+        Debug.Log("OnDamageReceived called with damage: " + damageAmount);
+        currentHealth -= damageAmount;
+
+        damageInstance = FMODUnity.RuntimeManager.CreateInstance(damageEvent);
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(damageInstance, gameObject.transform, gameObject.GetComponent<Rigidbody>());
+        damageInstance.setParameterByName("MaterialCheck", Material);
+        damageInstance.start();
+        damageInstance.release();
     }
+
     void MaterialCheck()
     {
         RaycastHit rh;
