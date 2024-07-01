@@ -9,39 +9,39 @@ using Invector.vCharacterController;
 public class ManagerMusic : MonoBehaviour
 {
     public EventReference MusicEvent;
-    public float IntensityParameterValue = 20f;      
+    public float? IntensityParameterValue = null;
     FMOD.Studio.EventInstance MusicInstance;
     public vControlAIMelee Enemy;
     public bool Combat = false;
     public bool EnemyDead = false;
+    
 
     private vThirdPersonController tpController;
     void Start()
     {
         tpController = GetComponent<vThirdPersonController>();
         MusicInstance = FMODUnity.RuntimeManager.CreateInstance(MusicEvent);
-        MusicInstance.setParameterByName("Intensity", IntensityParameterValue);
+        
 
     }
 
-    private void OnTriggerEnter(Collider AMB_Sceleton_Music)
+    private void OnTriggerEnter(Collider other)
     {
-        if (AMB_Sceleton_Music.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            MusicInstance.setParameterByName("Intensity", 20f);
+            // Если враг мертв, устанавливаем интенсивность на 60, в противном случае на 20
+            float intensity = (EnemyDead == true) ? 60f : 20f;
+            MusicInstance.setParameterByName("Intensity", intensity);
             MusicInstance.start();
-           
-        }
-        else if (Enemy.isDead && AMB_Sceleton_Music.CompareTag("Player"))
-        {
-           MusicInstance.setParameterByName("Intensity", 60f);
-            IntensityParameterValue = 100f;
+
+            // Если нужно обновить IntensityParameterValue в зависимости от состояния
+            IntensityParameterValue = intensity;
         }
     }
 
-    void OnTriggerExit(Collider col)
+    void OnTriggerExit(Collider other)
     {
-        if (col.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             MusicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
@@ -64,10 +64,11 @@ public class ManagerMusic : MonoBehaviour
             }
             else if (Enemy.isDead)
             {
-                Debug.Log("Enemy is dead. Setting Intensity to 100f and restarting music.");
+                
                 MusicInstance.setParameterByName("Intensity", 100f);
-                IntensityParameterValue = 100f;
+                IntensityParameterValue = 60f;
                 Enemy.isDead = false;
+                EnemyDead = true;
                 
             }
         }
@@ -77,7 +78,7 @@ public class ManagerMusic : MonoBehaviour
             {
                 MusicInstance.setParameterByName("Intensity", 0f);
                 IntensityParameterValue = 0f;
-                tpController.isDead = false;
+                
             }
         }
         else

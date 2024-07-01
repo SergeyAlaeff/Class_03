@@ -15,6 +15,8 @@ public class FmodFootstep : MonoBehaviour
     public EventReference landEvent;
     public EventReference idleEvent;
     public EventReference crouchEvent;
+    public EventReference attackEvent;
+    public EventReference damageEvent;
 
     private vThirdPersonController tpController;
     private vThirdPersonInput tpInput;
@@ -113,6 +115,15 @@ public class FmodFootstep : MonoBehaviour
         RuntimeManager.AttachInstanceToGameObject(crouchInstance, gameObject.transform, gameObject.GetComponent<Rigidbody>());
         crouchInstance.start();
         crouchInstance.release();
+    }
+
+    void Attack()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(attackEvent, gameObject.transform.position);
+    }
+    void Damage()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(damageEvent, gameObject.transform.position);
     }
     void MaterialCheck()
     {

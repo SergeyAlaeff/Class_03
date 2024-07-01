@@ -14,6 +14,9 @@ public class FootstepAI : MonoBehaviour // Объявляем класс FmodFoo
     
     public EventReference rollEvent; // Объявляем публичную строковую переменную rollEvent для звука кувырка
 
+    public EventReference attackEvent;
+
+    public EventReference damageEvent;
     vAIMotor AAA; // Объявляем переменную AAA типа vAIMotor 
     vControlAIMelee vAI;
     
@@ -80,6 +83,14 @@ public class FootstepAI : MonoBehaviour // Объявляем класс FmodFoo
 
         }
 
+        void Attack()
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(attackEvent, gameObject.transform.position);
+        }
+        void Damage()
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(damageEvent, gameObject.transform.position);
+        }
 
 
 

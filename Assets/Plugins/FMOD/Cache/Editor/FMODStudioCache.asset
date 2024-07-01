@@ -271,6 +271,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 43000
+--- !u!114 &-3660067064723723886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/AI/DamageAI
+  m_EditorClassIdentifier: 
+  Path: event:/AI/DamageAI
+  Guid:
+    Data1: -836137725
+    Data2: 1326203027
+    Data3: -419017283
+    Data4: -1144203642
+  Banks:
+  - {fileID: 8393945660958143044}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 509
 --- !u!114 &-3247266891705253934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -572,7 +599,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 3402
+  Length: 3452
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -621,13 +648,16 @@ MonoBehaviour:
   - {fileID: -2146260053200858729}
   - {fileID: -4788160789604974627}
   - {fileID: -2686179832152780816}
+  - {fileID: -3660067064723723886}
+  - {fileID: 7155314578291141331}
+  - {fileID: 6400317392646903403}
   EditorParameters:
   - {fileID: 3499017420105192259}
   MasterBanks:
   - {fileID: 8393945660958143044}
   StringsBanks:
   - {fileID: 5139156892868176595}
-  cacheTime: 638553941973724032
+  cacheTime: 638554080413117913
   cacheVersion: 131618
 --- !u!114 &259192735686015207
 MonoBehaviour:
@@ -965,10 +995,10 @@ MonoBehaviour:
   Path: "C:/Users/\u0421\u0435\u0440\u0433\u0435\u0439/Desktop/Class_03/Build/Desktop/Master.strings.bank"
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638553941973724032
+  lastModified: 638554080413117913
   FileSizes:
   - Name: Desktop
-    Value: 2642
+    Value: 2842
   Exists: 1
 --- !u!114 &5415525365293741974
 MonoBehaviour:
@@ -1080,6 +1110,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6896
+--- !u!114 &6400317392646903403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character/DamageChar
+  m_EditorClassIdentifier: 
+  Path: event:/Character/DamageChar
+  Guid:
+    Data1: 1073945540
+    Data2: 1078823078
+    Data3: 1775054976
+    Data4: 2037834739
+  Banks:
+  - {fileID: 8393945660958143044}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 494
+--- !u!114 &7155314578291141331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character/Attack
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Attack
+  Guid:
+    Data1: -1077161550
+    Data2: 1299103433
+    Data3: -332490828
+    Data4: 574918261
+  Banks:
+  - {fileID: 8393945660958143044}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 618
 --- !u!114 &7158533840073645277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1149,10 +1233,10 @@ MonoBehaviour:
   Path: "C:/Users/\u0421\u0435\u0440\u0433\u0435\u0439/Desktop/Class_03/Build/Desktop/Master.bank"
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638553941973664026
+  lastModified: 638554080413037849
   FileSizes:
   - Name: Desktop
-    Value: 9665664
+    Value: 9737216
   Exists: 1
 --- !u!114 &8694171133864746227
 MonoBehaviour:
